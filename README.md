@@ -16,6 +16,6 @@ docker build -t node-sass-builder .
 Then copy the binary out of the image:
 
 ```
-docker run -v `pwd`/releases:/releases node-sass-builder cp vendor/linux-x64-47/binding.node /releases/download/linux-x64-47.node
+docker run -v /tmp/node-sass-releases:/releases node-sass-builder cp vendor/linux-x64-47/binding.node /releases/linux-x64-47_binding.node
 ```
 
