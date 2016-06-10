@@ -23,5 +23,8 @@ git submodule update --init --recursive
 npm install
 node scripts/build -f 
 
-rsync -avP vendor "/build/$BRANCH/."
-
+cd vendor
+for file in $(find . -type f); do
+	DEST=$(echo "$file" | awk 'BEGIN { FS = "/" } ; {print $2"_"$3}')
+	cp $file "/build/$BRANCH/$DEST"
+done

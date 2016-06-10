@@ -3,7 +3,7 @@
 
 FROM mhart/alpine-node:5
 
-RUN apk --update add git build-base perl python rsync
+RUN apk --update add git build-base perl python
 
 COPY build.sh build.sh
 
