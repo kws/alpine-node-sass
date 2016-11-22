@@ -14,7 +14,7 @@ Build the docker image and run against master:
 docker build -t node-sass-builder . && docker run -v /tmp/node-sass-releases:/build node-sass-builder
 ```
 
-This will leave the compiled artifact in the mounted volume (/tmp/node-sass-releases in the exampe above).
+This will leave the compiled artifact in the mounted volume (/tmp/node-sass-releases in the example above).
 
 In most scenarios you would probably target a specific node-sass release, do this by providing the release tag to the build:
 
